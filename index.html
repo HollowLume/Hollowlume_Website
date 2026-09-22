@@ -64,15 +64,38 @@
     <div class="container">
         <div class="column">
           <main>
+            
+ <!-- Hover Banner Container -->
+<div class="banner-container">
+  <img class="banner-image" src="images/1.png" onmouseover="this.src='images/2.png'" onmouseout="this.src='images/1.png'" alt="Banner">
+</div>
 
-            <!--
-              By default, the Avatar is rounded. Use the following:
-              - avatar--rounded: Automatically rounds the image
-              - avatar--soft: Slightly rounds the image
-              - avatar--none: Removes any rounding
+<!-- Embedded Styles for the Banner -->
+<style>
+  .banner-container {
+    width: 100%;
+    max-width: 624px;
+    height: 192px;
+    margin: 20px auto 10px auto; /* Centers the banner and adds spacing */
+    overflow: hidden;
+    border-radius: 12px; /* Optional: smooths the corners of your banner */
+  }
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents the image from stretching weirdly */
+    transition: all 0.3s ease; /* Makes any filters or opacity smooth */
+  }
+  /* Optional: Scales mobile view down nicely so it doesn't crop on phones */
+  @media (max-width: 640px) {
+    .banner-container {
+      height: calc(100vw * (192 / 624)); 
+      width: 90%;
+    }
+  }
+</style>
 
-              Be sure to replace the src with your own image path and update the alt text
-            -->
+            
             <img class="avatar avatar--rounded" src="images/Profile1.gif" srcset="images/Profile1.gif 2x" alt="Hollowlume" width="128" height="128" fetchpriority="high">
 
             <!-- Replace with your name or brand -->
